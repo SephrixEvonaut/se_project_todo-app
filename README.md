@@ -1,3 +1,6 @@
+# Github Pages
+https://sephrixevonaut.github.io/se_project_todo-app/
+
 # Simple Todo App
 
 Give a brief description of the project here. Feel free to give it a different name.
