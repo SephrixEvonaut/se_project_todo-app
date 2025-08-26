@@ -2,7 +2,7 @@ import Popup from "./Popup.js";
 import { v4 as uuidv4 } from "https://jspm.dev/uuid";
 
 class PopupWithForm extends Popup {
-  constructor({ popupSelector, popupSubmit}) {
+  constructor({ popupSelector, popupSubmit }) {
     super(popupSelector);
     this._popupSubmit = popupSubmit;
 
@@ -11,7 +11,7 @@ class PopupWithForm extends Popup {
   }
 
   // _popupFormInput = [{name: 'name3', value: ''}, {name: 'date', value: ''}]
-  // inputValue = {name: 'name3', value: ''} 
+  // inputValue = {name: 'name3', value: ''}
 
   // popupInputValue = {name3: '', date : ''}
   _getInputValues() {
@@ -19,6 +19,8 @@ class PopupWithForm extends Popup {
 
     this._popupFormInput.forEach((inputValue) => {
       popupInputValue[inputValue.name] = inputValue.value;
+
+      console.log(popupInputValue);
     });
 
     const todoId = uuidv4();
@@ -26,14 +28,13 @@ class PopupWithForm extends Popup {
     date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
 
     popupInputValue.date = date;
-    popupInputValue.todoId = todoId;
-    
+    popupInputValue.id = todoId;
+
     return popupInputValue;
   }
 
   setEventListeners() {
     this._popupForm.addEventListener("submit", (evt) => {
-      console.log('form submit')
       evt.preventDefault();
 
       const values = this._getInputValues();
