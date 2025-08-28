@@ -1,8 +1,10 @@
 export default class TodoCounter {
   constructor(todos, selector) {
+    this._completed = 0;
     this._element = document.querySelector(selector);
     this._completed = todos.filter((t) => t.completed).length;
     this._total = todos.length;
+
 
     this._updateText();
   }
@@ -11,6 +13,7 @@ export default class TodoCounter {
   // to-do is deleted.
   updateCompleted = (increment) => {
     this._completed += increment ? 1 : -1;
+    
 
     this._updateText();
   };

@@ -12,8 +12,8 @@ const addTodoCloseBtn = addTodoPopup.querySelector(".popup__close");
 
 const todoCounter = new TodoCounter(initialTodos, ".counter__text");
 
-function handleCheck(checked) {
-  todoCounter.updateCompleted(checked);
+function handleCheck(completed) {
+  todoCounter.updateCompleted(completed);
 }
 
 function handleDelete(completed) {
