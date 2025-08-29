@@ -1,0 +1,34 @@
+{
+  "dependencies": {
+    "core-js": "^3.45.1",
+    "jquery": "^3.7.1",
+    "regenerator-runtime": "^0.14.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.3",
+    "@babel/preset-env": "^7.28.3",
+    "babel-loader": "^10.0.0",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "name": "se_project_todo-app",
+  "version": "1.0.0",
+  "description": "https://sephrixevonaut.github.io/se_project_todo-app/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SephrixEvonaut/se_project_todo-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SephrixEvonaut/se_project_todo-app/issues"
+  },
+  "homepage": "https://github.com/SephrixEvonaut/se_project_todo-app#readme"
+}
