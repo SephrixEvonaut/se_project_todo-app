@@ -1,5 +1,4 @@
 import Popup from "./Popup.js";
-import { v4 as uuidv4 } from "https://jspm.dev/uuid";
 
 class PopupWithForm extends Popup {
   constructor({ popupSelector, popupSubmit }) {
@@ -20,15 +19,7 @@ class PopupWithForm extends Popup {
     this._popupFormInput.forEach((inputValue) => {
       popupInputValue[inputValue.name] = inputValue.value;
 
-      console.log(popupInputValue);
     });
-
-    const todoId = uuidv4();
-    const date = new Date(popupInputValue.date);
-    date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
-
-    popupInputValue.date = date;
-    popupInputValue.id = todoId;
 
     return popupInputValue;
   }
